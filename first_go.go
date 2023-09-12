@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"hello_go/helper" // import other module file
 	"math/rand"
 )
 
@@ -11,7 +12,8 @@ func greeting(first_name string, last_name string) (int, int) {
 }
 
 func main() {
-	name := "ffan"
+	name := "ffan" // declare var in shortcut version
+	name = getName()
 	var age int = rand.Intn(100)
 	const total int = 100
 	var books [10]string // define array
@@ -20,11 +22,12 @@ func main() {
 	books[1] = "cuda"
 	s = append(s, 100) // demo append a slice
 	var length int = len(books)
+	helper.MyPrint(name, age)
 	if age > 30 {
 		// do something
 	} else {
 		//do other things
-		fmt.Println("age < 30\n")
+		fmt.Println("age < 30")
 	}
 	//for _, book := range books {  // placeholder symbol _
 	for index, book := range books { // loop in go
