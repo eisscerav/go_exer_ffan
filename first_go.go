@@ -16,6 +16,8 @@ func main() {
 	name = getName()
 	var age int = rand.Intn(100)
 	const total int = 100
+	var room = helper.MyVar
+	room += 1
 	var books [10]string // define array
 	var s []int
 	books[0] = "ffan"
