@@ -28,8 +28,6 @@ func try_stuct(names []string, ages []int) []Person {
 }
 
 func main() {
-	//var persons []Person
-
 	name := "ffan" // declare var in shortcut version
 	name = getName()
 	name2 := "sof"
@@ -38,13 +36,15 @@ func main() {
 	var age int = rand.Intn(100)
 	var age_2 int = rand.Intn(100)
 
-	var names []string
-	names = append(names, name)
-	names = append(names, name2)
+	names := []string{"ffan", "sof"}
+	//var names []string
+	//names = append(names, name)
+	//names = append(names, name2)
 
-	var ages []int
-	ages = append(ages, age)
-	ages = append(ages, age_2)
+	//var ages []int
+	//ages = append(ages, age)
+	//ages = append(ages, age_2)
+	ages := []int{40, 30}
 	try_stuct(names, ages)
 
 	const total int = 100
@@ -57,7 +57,8 @@ func main() {
 	var books [10]string                     // define array
 	var s []int                              // slice
 	var users = make([]map[string]string, 0) // list of maps
-	users[0]["ffan"] = "good"
+	//users[0]["ffan"] = "good"
+	users = append(users, user)
 	books[0] = "ffan"
 	books[1] = "cuda"
 	s = append(s, 100) // demo append a slice
