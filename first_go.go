@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"hello_go/helper" // import other module file
 	"math/rand"
+	"strconv"
 )
 
 func greeting(first_name string, last_name string) (int, int) {
@@ -15,11 +16,18 @@ func main() {
 	name := "ffan" // declare var in shortcut version
 	name = getName()
 	var age int = rand.Intn(100)
+	var age_2 int = rand.Intn(100)
 	const total int = 100
 	var room = helper.MyVar
 	room += 1
-	var books [10]string // define array
-	var s []int
+	// map in go
+	var user = make(map[string]string)
+	user["ffan"] = strconv.Itoa(age)
+	user["dili"] = strconv.Itoa(age_2)
+	var books [10]string                     // define array
+	var s []int                              // slice
+	var users = make([]map[string]string, 0) // list of maps
+	users[0]["ffan"] = "good"
 	books[0] = "ffan"
 	books[1] = "cuda"
 	s = append(s, 100) // demo append a slice
